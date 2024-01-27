@@ -200,6 +200,68 @@
                 </div>
             </div>
         </section>
+
+            <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>간단한 실시간 방명록</title>
+  <style>
+    #guestbook {
+      width: 50%;
+      margin: auto;
+      margin-top: 50px;
+    }
+
+    #guestbook input,
+    #guestbook textarea {
+      margin-bottom: 10px;
+    }
+
+    #guestbook button {
+      cursor: pointer;
+    }
+
+    #comments {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="guestbook">
+  <h2>방명록</h2>
+  <label for="name">이름:</label>
+  <input type="text" id="name" placeholder="이름을 입력하세요">
+
+  <label for="comment">메시지:</label>
+  <textarea id="comment" rows="4" placeholder="메시지를 입력하세요"></textarea>
+
+  <button onclick="submitComment()">작성</button>
+
+  <div id="comments"></div>
+</div>
+
+<script>
+  function submitComment() {
+    const name = document.getElementById('name').value;
+    const comment = document.getElementById('comment').value;
+
+    if (!name || !comment) {
+      alert('이름과 메시지를 모두 입력해주세요.');
+      return;
+    }
+
+    const commentDiv = document.createElement('div');
+    commentDiv.innerHTML = `<strong>${name}:</strong> ${comment}`;
+    document.getElementById('comments').appendChild(commentDiv);
+
+    // 입력 필드 초기화
+    document.getElementById('name').value = '';
+    document.getElementById('comment').value = '';
+  }
+</script>
+
+</body>
         <!-- Footer-->
         <footer class="bg-light py-5">
             <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2023 - Company Name</div></div>
