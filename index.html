@@ -141,17 +141,51 @@
                         <p class="text-muted mb-5">짧은 설명</p>
                     </div>
                 </div>
-              <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
-    <div class="col-md-6">
-        <p>신랑: 김재현</p>
-        <p>은행 계좌: 신한은행 1104-9736-1205</p>
+
+                <!--계좌누르면 복사되는 태그 추가-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>복사 가능한 숫자</title>
+  <script>
+    function copyToClipboard(accountNumber) {
+      const tempInput = document.createElement('input');
+      tempInput.value = accountNumber;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      document.execCommand('copy');
+      document.body.removeChild(tempInput);
+      alert('계좌번호가 복사되었습니다: ' + accountNumber);
+    }
+  </script>
+</head>
+<body>
+
+<div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+    <div class="col-md-6 text-center">
+        <p onclick="copyToClipboard('1234-5678-1010')" style="cursor: pointer;">신한은행 계좌: <strong>1234-5678-1010</strong></p>
         <!-- 추가적인 내용을 원하는 대로 추가할 수 있습니다. -->
     </div>
-    <div class="col-md-6">
-        <p>신부: 김건희</p>
-        <p>카카오톡 ID: 12345678</p>
+    <div class="col-md-6 text-center">
+        <p onclick="copyToClipboard('1234-5678-1010')" style="cursor: pointer;">농협은행 계좌: <strong>1234-5678-1010</strong></p>
         <!-- 추가적인 내용을 원하는 대로 추가할 수 있습니다. -->
     </div>
+</div>
+
+</body>
+</html>
+                <!--계좌누르면 복사되는 태그 추가-->
+        <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+            <div class="col-md-6 text-center">
+                <p>신랑: 김재현</p>
+                <p>은행 계좌: 신한은행 1104-9736-1205</p>
+                    <!-- 추가적인 내용을 원하는 대로 추가할 수 있습니다. -->
+                                </div>
+            <div class="col-md-6 text-center">
+                    <p>신부: 김건희</p>
+                    <p>카카오톡 ID: 12345678</p>
+                <!-- 추가적인 내용을 원하는 대로 추가할 수 있습니다. -->
+        </div>
 </div>
 
                 <div class="row gx-4 gx-lg-5 justify-content-center">
