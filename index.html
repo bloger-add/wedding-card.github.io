@@ -78,10 +78,56 @@
                     <div class="col-lg-3 col-md-6 text-center">
                         <div class="mt-5">
                            <p>카카오 api 첨부해보기</p>
-                            <p>자가용 
-                                <p>네비게이션
-                            <p>버스대절 </p>
-                    </div>
+  <!--차량이용에대한주소복사-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이동 안내 및 주소 복사</title>
+  <script>
+    function copyToClipboard(text) {
+      const tempInput = document.createElement('input');
+      tempInput.value = text;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      document.execCommand('copy');
+      document.body.removeChild(tempInput);
+      alert('주소가 복사되었습니다: ' + text);
+    }
+  </script>
+</head>
+<body>
+
+<div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+    <div class="col-md-6 text-center">
+        <p>시외버스 터미널 하차 시 - 3번, 3-1번, 4번, 4-1번, 31번, 32번, 33번, 34번 이용 후 장양초등학교 하차</p>
+    </div>
+    <div class="col-md-6 text-center">
+        <p>원주역 하차 시 - 18번, 19번 이용 시 시외버스터미널에서 환승, 30번, 90번 이용 시 장양초등학교 하차</p>
+    </div>
+</div>
+
+<div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+    <div class="col-md-12 text-center">
+        <p>영동고속도로 원주IC에서 횡성 방향으로 좌회전 후 30m 앞 오른쪽에 위치</p>
+    </div>
+</div>
+
+<div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+    <div class="col-md-12 text-center">
+        <p onclick="copyToClipboard('네비게이션에【원주 아모르 웨딩홀】을 입력하세요. 주소: 강원특별자치도 원주시 북원로 2888')">네비게이션에【원주 아모르 웨딩홀】을 입력하세요. 주소: 강원특별자치도 원주시 북원로 2888</p>
+    </div>
+</div>
+
+<div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+    <div class="col-md-12 text-center">
+        <p>춘천 호반체육관 주차장에서 오전 9시 출발</p>
+    </div>
+</div>
+
+</body>
+
+<!--차량이용에대한주소복사-->
+                        
                         <br><br><br></br>
                     <div class="col-lg-4 col-sm-6">
                         <a class="portfolio-box" href="assets/img/portfolio/fullsize/3.jpg" title="Project Name">
